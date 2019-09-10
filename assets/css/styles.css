@@ -1,0 +1,259 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+::selection {
+  background: transparent;
+  text-shadow: none;
+}
+
+:root {
+  /* palette */
+  --alto: #ddd;
+  --mine-shaft: #222;
+  --dodger-blue: #1098f7;
+  --dove-gray: #666;
+  --canary: #fcfc62;
+  --whisper: #f2f2f6;
+  --bridal-health: #fffcf7;
+  --oslo-gray: #8a9499;
+
+  /* backgrounds */
+  --link-button-background: var(--dodger-blue);
+  --link-button-background-hover: var(--bridal-health);
+  --location-background: var(--canary);
+  --main-background: var(--whisper);
+  --project-list-background: var(--bridal-health);
+  --project-even-background: var(--whisper);
+
+  /* fonts */
+  --styled-font: 'Fira Sans Condensed', sans-serif;
+
+  /* text */
+  --main-text-color: var(--mine-shaft);
+  --description-text: var(--dove-gray);
+  --link-button-text: var(--bridal-health);
+  --link-button-text-hover: var(--dodger-blue);
+  --location-text: var(--dodger-blue);
+  --project-title-text: var(--dodger-blue);
+  --project-description-text: var(--oslo-gray);
+
+  /* borders */
+  --body-border-color: var(--dodger-blue);
+  --projects-list-border-color: var(--oslo-gray);
+  --project-border-color: var(--alto);
+
+  /* media-query */
+  --medium-screen: 500px;
+  --lagre-screen: 1000px;
+}
+
+body {
+  height: 100%;
+  font: 16px/1.5 'Merriweather', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: var(--main-text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--main-background);
+  border-top: 5px solid var(--body-border-color);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--styled-font);
+}
+
+.icon-fire {
+  font-size: 2rem;
+}
+
+.site-header {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+}
+
+.site-name {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--description-text);
+}
+
+.links {
+  margin-bottom: 4rem;
+}
+
+.link {
+  display: inline-block;
+  color: var(--link-button-text);
+  font-size: 1.2rem;
+  text-decoration: none;
+  background: var(--link-button-background);
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: var(--link-button-text-hover);
+  background: var(--link-button-background-hover);
+}
+
+.location {
+  display: inline-block;
+  font-family: var(--styled-font);
+  font-size: 0.9rem;
+  color: var(--location-text);
+  background: var(--location-background);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  /* font-weight: 400; */
+  margin: 1rem 0;
+}
+
+.projects {
+  background: var(--project-list-background);
+  border-bottom: 5px solid var(--projects-list-border-color);
+  padding: 4rem 1.5rem;
+}
+
+.projects-list {
+  list-style: none;
+}
+
+.github-logo {
+  width: 140px;
+}
+
+.project {
+  border-bottom: 1px dotted var(--project-border-color);
+  padding: 2rem 0;
+}
+
+.project:nth-child(even) {
+  background: var(--project-even-background);
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project-title {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--project-title-text);
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.8rem;
+  color: var(--project-description-text);
+}
+
+.tags {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--canary);
+  padding: 0.2rem 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  width: 100%;
+  background: var(--dodger-blue);
+  color: var(--whisper);
+  padding: 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  font-size: 1rem;
+}
+
+.footer-container .icon-fire {
+  display: inline-block;
+  color: var(--canary);
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  font-family: var(--styled-font);
+}
+
+@media (min-width: 600px) {
+  .site-name {
+    font-size: 4rem;
+  }
+
+  .site-description {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .projects {
+    padding: 4rem;
+  }
+
+  .footer-container {
+    width: 50%;
+    padding: 1rem 4rem;
+    margin: 0 auto;
+  }
+}
