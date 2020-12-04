@@ -58,8 +58,8 @@ html {
 
 body {
   height: 100%;
-  font: 16px/1.5 'Merriweather', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font: 16px/1.5 'Merriweather', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   color: var(--main-text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -229,7 +229,7 @@ h3 {
   font-family: var(--styled-font);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .site-name {
     font-size: 4rem;
   }
