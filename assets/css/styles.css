@@ -229,7 +229,7 @@ h3 {
   font-family: var(--styled-font);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 980px) {
   .site-name {
     font-size: 4rem;
   }
