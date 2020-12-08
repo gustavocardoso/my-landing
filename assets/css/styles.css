@@ -159,7 +159,7 @@ h3 {
 }
 
 .github-logo {
-  width: 140px;
+  width: 240px;
 }
 
 .project {
@@ -236,6 +236,10 @@ h3 {
 
   .site-description {
     font-size: 1.4rem;
+  }
+
+  .github-logo {
+    width: 300px;
   }
 
   .container {
